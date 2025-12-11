@@ -1,0 +1,26 @@
+{
+  "name": "Tauri + React + Rust",
+  "image": "mcr.microsoft.com/devcontainers/rust:1-1-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    },
+    "ghcr.io/devcontainers/features/pnpm:1": {}
+  },
+  "postCreateCommand": "pnpm install",
+  "forwardPorts": [1420, 3000],
+  "portsAttributes": {
+    "1420": { "label": "Tauri App" },
+    "3000": { "label": "Vite Dev Server" }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "tauri-apps.tauri",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
+}
